@@ -1,8 +1,10 @@
-package com.tomato.irrigation;
+package com.tomato.irrigation.utils;
 
 import android.widget.Toast;
 
 import androidx.annotation.StringRes;
+
+import com.tomato.irrigation.base.BaseApplication;
 
 
 /**

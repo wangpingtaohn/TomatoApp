@@ -1,166 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="20dp"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content">
 
-
-    <TextView
-        android:id="@+id/tvEnvironment"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="160dp"
-        android:text="环境数据"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingBottom="60dp"
+        android:background="@drawable/ic_top_bg">
 
-    <TextView
-        android:id="@+id/tvTemperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_temperature"
-        android:drawablePadding="6dp"
-        android:text="大棚温度："
-        android:textColor="@color/color_666"
-        android:textSize="18dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvEnvironment"
-        app:layout_constraintTop_toBottomOf="@id/tvEnvironment" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="48dp"
+            android:text="西红柿智能灌溉系统"
+            android:textColor="@color/color_03314B"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTemperatureValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="35°"
-        android:textColor="@color/purple_200"
-        android:textSize="20dp"
-        android:drawablePadding="6dp"
-        app:layout_constraintLeft_toRightOf="@id/tvTemperature"
-        app:layout_constraintTop_toTopOf="@id/tvTemperature" />
+        <TextView
+            android:id="@+id/tvEnvironment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="环境数据"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
 
+        <ImageView
+            android:id="@+id/ivTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="60dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_temperature"
+            app:layout_constraintRight_toRightOf="@id/v1"
+            app:layout_constraintTop_toBottomOf="@id/tvEnvironment" />
 
-    <TextView
-        android:id="@+id/tvHumidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_humidity"
-        android:text="大棚湿度："
-        android:textColor="@color/color_666"
-        android:textSize="18dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvTemperature"
-        app:layout_constraintTop_toBottomOf="@id/tvTemperature" />
+        <TextView
+            android:id="@+id/tvTemperatureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="35°"
+            android:textColor="@color/color_333"
+            android:textSize="32dp"
+            app:layout_constraintLeft_toLeftOf="@id/ivTemperature"
+            app:layout_constraintRight_toRightOf="@id/ivTemperature"
+            app:layout_constraintTop_toBottomOf="@id/ivTemperature" />
 
-    <TextView
-        android:id="@+id/tvHumidityValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="25°"
-        android:textColor="@color/purple_200"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toRightOf="@id/tvTemperature"
-        app:layout_constraintTop_toTopOf="@id/tvHumidity" />
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="20dp"
+            android:text="大棚温度"
+            android:textColor="@color/color_333"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="@id/tvTemperatureValue"
+            app:layout_constraintRight_toRightOf="@id/tvTemperatureValue"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperatureValue" />
 
-    <TextView
-        android:id="@+id/tvThreshold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="54dp"
-        android:text="阙值"
-        android:textSize="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvEnvironment" />
-
-    <EditText
-        android:layout_width="88dp"
-        android:textCursorDrawable="@null"
-        android:hint="请输入阙值"
-        android:textSize="12dp"
-        android:layout_height="32dp"
-        android:paddingLeft="8dp"
-        android:inputType="numberDecimal"
-        android:background="@drawable/shape_white_solid_666_stroke_radius2"
-        app:layout_constraintLeft_toLeftOf="@+id/tvThreshold"
-        app:layout_constraintTop_toTopOf="@id/tvTemperature" />
-
-    <EditText
-        android:paddingLeft="8dp"
-        android:hint="请输入阙值"
-        android:inputType="numberDecimal"
-        android:layout_width="88dp"
-        android:textSize="12dp"
-        android:layout_height="32dp"
-        android:textCursorDrawable="@null"
-        android:background="@drawable/shape_white_solid_666_stroke_radius2"
-        app:layout_constraintLeft_toLeftOf="@+id/tvThreshold"
-        app:layout_constraintTop_toTopOf="@id/tvHumidity" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_white_solid_666_stroke_radius8"
+            android:hint="请输入阙值"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTemperature"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperature" />
 
 
-    <TextView
-        android:id="@+id/tvSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="大棚开水阀门开关"
-        android:textColor="@color/color_666"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvHumidity" />
+        <View
+            android:id="@+id/v1"
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:background="@color/color_D9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivTemperature" />
 
-    <TextView
-        android:id="@+id/tvOpen"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="开"
-        android:textColor="@color/white"
-        app:layout_constraintLeft_toLeftOf="@id/tvSwitch"
-        app:layout_constraintTop_toBottomOf="@id/tvSwitch" />
+        <ImageView
+            android:id="@+id/ivHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="48dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_humidity"
+            app:layout_constraintLeft_toRightOf="@id/v1"
+            app:layout_constraintTop_toBottomOf="@id/tvEnvironment" />
 
-    <TextView
-        android:id="@+id/tvclose"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/color_666"
-        android:gravity="center"
-        android:text="关"
-        android:textColor="@color/black"
-        app:layout_constraintRight_toRightOf="@id/tvSwitch"
-        app:layout_constraintTop_toBottomOf="@id/tvSwitch" />
+        <TextView
+            android:id="@+id/tvHumidityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="70%"
+            android:textColor="@color/color_333"
+            android:textSize="32dp"
+            app:layout_constraintLeft_toLeftOf="@id/ivHumidity"
+            app:layout_constraintRight_toRightOf="@id/ivHumidity"
+            app:layout_constraintTop_toBottomOf="@id/ivHumidity" />
 
-    <TextClock
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="40dp"
-        android:textColor="@color/color_666"
-        android:textSize="14dp"
-        android:format24Hour="yyyy-MM-dd"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOpen"
-        tools:text="2022-06-12" />
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="20dp"
+            android:text="大棚湿度"
+            android:textColor="@color/color_333"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="@id/tvHumidityValue"
+            app:layout_constraintRight_toRightOf="@id/tvHumidityValue"
+            app:layout_constraintTop_toBottomOf="@id/tvHumidityValue" />
 
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/color_666"
-        android:format24Hour="HH:MM"
-        android:textSize="14dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvDate"
-        app:layout_constraintRight_toRightOf="@id/tvDate"
-        app:layout_constraintTop_toBottomOf="@id/tvDate"
-        tools:text="10:23" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/etValue"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_white_solid_666_stroke_radius8"
+            android:hint="请输入阙值"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/tvHumidity"
+            app:layout_constraintTop_toBottomOf="@id/tvHumidity" />
+
+
+        <TextView
+            android:id="@+id/tvOpen"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/shape_purple_radius4"
+            android:gravity="center"
+            android:text="开"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvClose"
+            app:layout_constraintTop_toBottomOf="@id/etValue" />
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/shape_white_solid_purple_stroke_radius4"
+            android:gravity="center"
+            android:text="关"
+            android:textColor="@color/purple_200"
+            android:textSize="18dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/tvOpen"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etValue" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="right"
+            android:text="当前时间："
+            android:textColor="@color/color_BC"
+            android:textSize="13dp"
+            app:layout_constraintRight_toLeftOf="@id/v1"
+            app:layout_constraintTop_toBottomOf="@id/tvOpen" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format24Hour="yyyy-MM-dd HH:MM"
+            android:textColor="@color/color_666"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@id/tvDate"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            tools:text="10:23" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

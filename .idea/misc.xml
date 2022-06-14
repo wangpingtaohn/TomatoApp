@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_space/TomatoApp/app/src/main/res/drawable/shape_purle_radius4.xml" value="0.3148148148148148" />
         <entry key="..\:/Android_space/TomatoApp/app/src/main/res/drawable/shape_white_radius9.xml" value="0.32407407407407407" />
+        <entry key="..\:/Android_space/TomatoApp/app/src/main/res/drawable/shape_white_solid_666_stroke_radius16.xml" value="0.32407407407407407" />
+        <entry key="..\:/Android_space/TomatoApp/app/src/main/res/drawable/shape_white_solid_666_stroke_radius2.xml" value="0.32407407407407407" />
+        <entry key="..\:/Android_space/TomatoApp/app/src/main/res/drawable/shape_white_solid_purle_stroke_radius4.xml" value="0.32407407407407407" />
         <entry key="..\:/Android_space/TomatoApp/app/src/main/res/layout/activity_login.xml" value="0.2760416666666667" />
         <entry key="..\:/Android_space/TomatoApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android_space/TomatoApp/app/src/main/res/layout/dialog_layout.xml" value="0.36614583333333334" />

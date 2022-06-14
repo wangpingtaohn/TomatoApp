@@ -1,4 +1,4 @@
-package com.tomato.irrigation;
+package com.tomato.irrigation.base;
 
 import android.app.Application;
 

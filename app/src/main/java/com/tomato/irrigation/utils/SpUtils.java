@@ -1,8 +1,10 @@
-package com.tomato.irrigation;
+package com.tomato.irrigation.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+
+import com.tomato.irrigation.base.BaseApplication;
 
 import java.util.Map;
 

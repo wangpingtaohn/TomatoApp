@@ -1,10 +1,14 @@
-package com.tomato.irrigation;
+package com.tomato.irrigation.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tomato.irrigation.R;
+import com.tomato.irrigation.utils.SpUtils;
+import com.tomato.irrigation.utils.ToastUtil;
 
 public class LoginActivity extends AppCompatActivity {
 
